@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f172a;
+  --color-secondary: #f8fafc;
+  --color-accent: #3b82f6;
+  --color-charcoal: #334155;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-charcoal bg-white;
+  }
+}
+
+.timeline-item::before {
+  content: '';
+  @apply absolute left-0 top-0 h-full w-0.5 bg-accent/20;
+}
+
+.timeline-dot {
+  @apply absolute left-[-5px] top-0 w-3 h-3 rounded-full bg-accent border-2 border-white;
+}
+
+.markdown-body {
+  @apply prose prose-slate max-w-none;
+}
